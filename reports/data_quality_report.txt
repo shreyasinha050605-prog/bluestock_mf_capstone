@@ -1,0 +1,15 @@
+Data Quality Report
+
+Total Schemes: 40
+
+Missing AMFI Codes: 0
+
+Unique Fund Houses: 10
+
+Risk Categories:
+Low
+Moderate
+High
+Very High
+
+No duplicate scheme codes found.
