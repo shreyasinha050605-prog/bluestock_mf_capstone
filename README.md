@@ -245,6 +245,13 @@ dashboard/bluestock_mf_dashboard.twbx
 ![Market Trends](reports/dashboard_4_sip_market_trends.png)
 ---
 
+## Live Dashboard
+
+Tableau Public Dashboard:
+https://public.tableau.com/views/BluestockMutualFundsAnalyticsDashboard/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link
+
+---
+
 ## Installation
 
 Clone the repository:
