@@ -1,7 +1,12 @@
+from pathlib import Path
 import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATA_DIR = BASE_DIR / "data" / "processed"
+
 perf = pd.read_csv(
-    "../data/processed/07_performance_clean.csv"
+    DATA_DIR / "07_performance_clean.csv"
 )
 
 def recommend_funds(risk_level):
@@ -33,8 +38,10 @@ def recommend_funds(risk_level):
 if __name__ == "__main__":
 
     risk = input(
-        "Enter Risk Level: "
+        "Enter Risk Level (Low/Moderate/High): "
     )
+
+    print("\nRecommended Funds:\n")
 
     print(
         recommend_funds(risk)

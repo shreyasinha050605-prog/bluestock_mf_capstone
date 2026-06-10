@@ -1,5 +1,24 @@
 
 ==================================================
+FILE: sbi_bluechip_nav.csv
+
+SHAPE:
+(3235, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date       nav
+0  29-05-2026  104.6570
+1  27-05-2026  104.5833
+2  26-05-2026  104.5269
+3  25-05-2026  104.5215
+4  22-05-2026  104.3467
+
+==================================================
 FILE: 01_fund_master.csv
 
 SHAPE:
@@ -24,12 +43,12 @@ sebi_category_code     object
 dtype: object
 
 FIRST 5 ROWS:
-   amfi_code       fund_house                                   scheme_name category sub_category  ... min_sip_amount min_lumpsum_amount   fund_manager  risk_category  sebi_category_code
-0     119551  SBI Mutual Fund     SBI Bluechip Fund - Regular Plan - Growth   Equity    Large Cap  ...            500               1000  Sohini Andani       Moderate                EC01
-1     119552  SBI Mutual Fund      SBI Bluechip Fund - Direct Plan - Growth   Equity    Large Cap  ...            500               1000  Sohini Andani       Moderate                EC01
-2     119598  SBI Mutual Fund    SBI Small Cap Fund - Regular Plan - Growth   Equity    Small Cap  ...            500               1000  R. Srinivasan      Very High                EC03
-3     119599  SBI Mutual Fund     SBI Small Cap Fund - Direct Plan - Growth   Equity    Small Cap  ...            500               1000  R. Srinivasan      Very High                EC03
-4     119120  SBI Mutual Fund  SBI Magnum Gilt Fund - Regular Plan - Growth     Debt         Gilt  ...            500               1000   Dinesh Ahuja            Low                DC02
+   amfi_code       fund_house                                   scheme_name  ...   fund_manager risk_category sebi_category_code
+0     119551  SBI Mutual Fund     SBI Bluechip Fund - Regular Plan - Growth  ...  Sohini Andani      Moderate               EC01
+1     119552  SBI Mutual Fund      SBI Bluechip Fund - Direct Plan - Growth  ...  Sohini Andani      Moderate               EC01
+2     119598  SBI Mutual Fund    SBI Small Cap Fund - Regular Plan - Growth  ...  R. Srinivasan     Very High               EC03
+3     119599  SBI Mutual Fund     SBI Small Cap Fund - Direct Plan - Growth  ...  R. Srinivasan     Very High               EC03
+4     119120  SBI Mutual Fund  SBI Magnum Gilt Fund - Regular Plan - Growth  ...   Dinesh Ahuja           Low               DC02
 
 [5 rows x 15 columns]
 
@@ -105,12 +124,12 @@ risk_grade             object
 dtype: object
 
 FIRST 5 ROWS:
-   amfi_code                                   scheme_name       fund_house   category     plan  ...  max_drawdown_pct  aum_crore  expense_ratio_pct  morningstar_rating  risk_grade
-0     119551     SBI Bluechip Fund - Regular Plan - Growth  SBI Mutual Fund  Large Cap  Regular  ...            -21.70      14288               1.54                   4    Moderate
-1     119552      SBI Bluechip Fund - Direct Plan - Growth  SBI Mutual Fund  Large Cap   Direct  ...            -24.43       1231               0.66                   3    Moderate
-2     119598    SBI Small Cap Fund - Regular Plan - Growth  SBI Mutual Fund  Small Cap  Regular  ...            -13.35      19259               1.43                   5   Very High
-3     119599     SBI Small Cap Fund - Direct Plan - Growth  SBI Mutual Fund  Small Cap   Direct  ...            -24.78      36061               0.72                   4   Very High
-4     119120  SBI Magnum Gilt Fund - Regular Plan - Growth  SBI Mutual Fund       Gilt  Regular  ...             -2.30      24101               0.77                   5         Low
+   amfi_code                                   scheme_name       fund_house  ... expense_ratio_pct morningstar_rating  risk_grade
+0     119551     SBI Bluechip Fund - Regular Plan - Growth  SBI Mutual Fund  ...              1.54                  4    Moderate
+1     119552      SBI Bluechip Fund - Direct Plan - Growth  SBI Mutual Fund  ...              0.66                  3    Moderate
+2     119598    SBI Small Cap Fund - Regular Plan - Growth  SBI Mutual Fund  ...              1.43                  5   Very High
+3     119599     SBI Small Cap Fund - Direct Plan - Growth  SBI Mutual Fund  ...              0.72                  4   Very High
+4     119120  SBI Magnum Gilt Fund - Regular Plan - Growth  SBI Mutual Fund  ...              0.77                  5         Low
 
 [5 rows x 19 columns]
 
@@ -135,6 +154,44 @@ FIRST 5 ROWS:
 4  2022-01-07    NIFTY50     17759.15
 
 ==================================================
+FILE: icici_bluechip_nav.csv
+
+SHAPE:
+(3306, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date       nav
+0  31-05-2026  104.3083
+1  29-05-2026  104.3129
+2  27-05-2026  105.9296
+3  26-05-2026  105.5115
+4  25-05-2026  105.9217
+
+==================================================
+FILE: axis_bluechip_nav.csv
+
+SHAPE:
+(3564, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date        nav
+0  29-05-2026  6151.1139
+1  27-05-2026  6146.6118
+2  26-05-2026  6144.0004
+3  25-05-2026  6144.8478
+4  22-05-2026  6142.6380
+
+==================================================
 FILE: 08_investor_transactions.csv
 
 SHAPE:
@@ -157,12 +214,33 @@ kyc_status             object
 dtype: object
 
 FIRST 5 ROWS:
-  investor_id transaction_date  amfi_code transaction_type  amount_inr        state       city city_tier age_group  gender  annual_income_lakh payment_mode kyc_status
-0   INV003054       2024-01-01     119092              SIP        1834    Telangana  Hyderabad       T30       56+  Female                77.1          UPI   Verified
-1   INV002952       2024-01-01     148567       Redemption      392882       Punjab   Amritsar       B30     18-25    Male                 7.1       Cheque   Verified
-2   INV003420       2024-01-01     118636              SIP         912      Haryana  Faridabad       B30     36-45    Male                47.2      Mandate   Verified
-3   INV003436       2024-01-01     118634              SIP        1102  Maharashtra     Mumbai       T30     36-45  Female                54.4       Cheque    Pending
-4   INV004691       2024-01-01     119094          Lumpsum        8682        Delhi      Noida       T30     26-35    Male                14.5  Net Banking    Pending
+  investor_id transaction_date  amfi_code transaction_type  amount_inr  ... age_group  gender annual_income_lakh payment_mode kyc_status
+0   INV003054       2024-01-01     119092              SIP        1834  ...       56+  Female               77.1          UPI   Verified
+1   INV002952       2024-01-01     148567       Redemption      392882  ...     18-25    Male                7.1       Cheque   Verified
+2   INV003420       2024-01-01     118636              SIP         912  ...     36-45    Male               47.2      Mandate   Verified
+3   INV003436       2024-01-01     118634              SIP        1102  ...     36-45  Female               54.4       Cheque    Pending
+4   INV004691       2024-01-01     119094          Lumpsum        8682  ...     26-35    Male               14.5  Net Banking    Pending
+
+[5 rows x 13 columns]
+
+==================================================
+FILE: nippon_large_cap_nav.csv
+
+SHAPE:
+(3297, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date      nav
+0  29-05-2026  98.4656
+1  27-05-2026  99.8092
+2  26-05-2026  99.4356
+3  25-05-2026  99.8047
+4  22-05-2026  98.7497
 
 ==================================================
 FILE: 09_portfolio_holdings.csv
@@ -210,6 +288,25 @@ FIRST 5 ROWS:
 4  2024-04  Large & Mid Cap            4214.0
 
 ==================================================
+FILE: hdfc_top100_nav.csv
+
+SHAPE:
+(3090, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date       nav
+0  31-05-2026  193.6836
+1  29-05-2026  193.6848
+2  27-05-2026  195.0501
+3  26-05-2026  194.2258
+4  25-05-2026  193.5599
+
+==================================================
 FILE: 03_aum_by_fund_house.csv
 
 SHAPE:
@@ -230,6 +327,25 @@ FIRST 5 ROWS:
 2  2022-03-31     HDFC Mutual Fund            4.35     435000          195
 3  2022-03-31      Nippon India MF            2.70     270000          177
 4  2022-03-31    Kotak Mahindra MF            2.70     270000          168
+
+==================================================
+FILE: kotak_bluechip_nav.csv
+
+SHAPE:
+(3300, 2)
+
+DATA TYPES:
+date     object
+nav     float64
+dtype: object
+
+FIRST 5 ROWS:
+         date       nav
+0  29-05-2026  248.6673
+1  27-05-2026  251.2273
+2  26-05-2026  251.2702
+3  25-05-2026  249.2266
+4  22-05-2026  247.8039
 
 ==================================================
 FILE: 06_industry_folio_count.csv

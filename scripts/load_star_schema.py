@@ -1,31 +1,36 @@
+from pathlib import Path
 import pandas as pd
 from sqlalchemy import create_engine
 
-base = "/Users/shreyasinha/Desktop/bluestock_mf_capstone"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATA_DIR = BASE_DIR / "data"
+PROCESSED_DIR = DATA_DIR / "processed"
+DB_DIR = DATA_DIR / "db"
 
 engine = create_engine(
-    f"sqlite:///{base}/data/db/bluestock_mf.db"
+    f"sqlite:///{DB_DIR/'bluestock_mf.db'}"
 )
 
 # Load cleaned files
 fund_master = pd.read_csv(
-    f"{base}/data/processed/01_fund_master_clean.csv"
+    PROCESSED_DIR / "01_fund_master_clean.csv"
 )
 
 nav_history = pd.read_csv(
-    f"{base}/data/processed/02_nav_history_clean.csv"
+    PROCESSED_DIR / "02_nav_history_clean.csv"
 )
 
 transactions = pd.read_csv(
-    f"{base}/data/processed/08_transactions_clean.csv"
+    PROCESSED_DIR / "08_transactions_clean.csv"
 )
 
 performance = pd.read_csv(
-    f"{base}/data/processed/07_performance_clean.csv"
+    PROCESSED_DIR / "07_performance_clean.csv"
 )
 
 aum = pd.read_csv(
-    f"{base}/data/processed/03_aum_clean.csv"
+    PROCESSED_DIR / "03_aum_clean.csv"
 )
 
 # DIM_FUND
@@ -50,7 +55,7 @@ fact_nav = nav_history.rename(
 fact_nav["daily_return"] = (
     fact_nav
     .groupby("amfi_code")["nav"]
-    .pct_change() * 100
+    .pct_change(fill_method=None) * 100
 )
 
 # FACT_TRANSACTIONS

@@ -2,7 +2,8 @@ from pathlib import Path
 import requests
 import pandas as pd
 
-BASE_DIR = Path("/Users/shreyasinha/Desktop/bluestock_mf_capstone")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 RAW_DIR = BASE_DIR / "data" / "raw"
 
 schemes = {
@@ -15,16 +16,39 @@ schemes = {
 
 for name, code in schemes.items():
 
-    url = f"https://api.mfapi.in/mf/{code}"
+    try:
 
-    response = requests.get(url)
+        url = f"https://api.mfapi.in/mf/{code}"
 
-    data = response.json()
+        response = requests.get(
+            url,
+            timeout=20
+        )
 
-    df = pd.DataFrame(data["data"])
+        response.raise_for_status()
 
-    filename = RAW_DIR / f"{name}_nav.csv"
+        data = response.json()
 
-    df.to_csv(filename, index=False)
+        df = pd.DataFrame(
+            data["data"]
+        )
 
-    print(f"Saved {filename}")
+        filename = (
+            RAW_DIR
+            / f"{name}_nav.csv"
+        )
+
+        df.to_csv(
+            filename,
+            index=False
+        )
+
+        print(
+            f"Saved {filename}"
+        )
+
+    except Exception as e:
+
+        print(
+            f"Failed for {name}: {e}"
+        )
