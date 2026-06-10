@@ -1,3 +1,10 @@
+"""
+SQLite Loader
+
+Loads processed datasets into the SQLite database
+for querying, validation, and dashboard integration.
+"""
+
 from pathlib import Path
 import pandas as pd
 from sqlalchemy import create_engine

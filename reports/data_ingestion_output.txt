@@ -3,7 +3,7 @@
 FILE: sbi_bluechip_nav.csv
 
 SHAPE:
-(3235, 2)
+(3242, 2)
 
 DATA TYPES:
 date     object
@@ -12,11 +12,11 @@ dtype: object
 
 FIRST 5 ROWS:
          date       nav
-0  29-05-2026  104.6570
-1  27-05-2026  104.5833
-2  26-05-2026  104.5269
-3  25-05-2026  104.5215
-4  22-05-2026  104.3467
+0  09-06-2026  105.5793
+1  08-06-2026  105.3084
+2  05-06-2026  105.1070
+3  04-06-2026  104.8095
+4  03-06-2026  104.7496
 
 ==================================================
 FILE: 01_fund_master.csv
@@ -124,12 +124,12 @@ risk_grade             object
 dtype: object
 
 FIRST 5 ROWS:
-   amfi_code                                   scheme_name       fund_house  ... expense_ratio_pct morningstar_rating  risk_grade
-0     119551     SBI Bluechip Fund - Regular Plan - Growth  SBI Mutual Fund  ...              1.54                  4    Moderate
-1     119552      SBI Bluechip Fund - Direct Plan - Growth  SBI Mutual Fund  ...              0.66                  3    Moderate
-2     119598    SBI Small Cap Fund - Regular Plan - Growth  SBI Mutual Fund  ...              1.43                  5   Very High
-3     119599     SBI Small Cap Fund - Direct Plan - Growth  SBI Mutual Fund  ...              0.72                  4   Very High
-4     119120  SBI Magnum Gilt Fund - Regular Plan - Growth  SBI Mutual Fund  ...              0.77                  5         Low
+   amfi_code                                   scheme_name       fund_house   category  ... aum_crore  expense_ratio_pct  morningstar_rating  risk_grade
+0     119551     SBI Bluechip Fund - Regular Plan - Growth  SBI Mutual Fund  Large Cap  ...     14288               1.54                   4    Moderate
+1     119552      SBI Bluechip Fund - Direct Plan - Growth  SBI Mutual Fund  Large Cap  ...      1231               0.66                   3    Moderate
+2     119598    SBI Small Cap Fund - Regular Plan - Growth  SBI Mutual Fund  Small Cap  ...     19259               1.43                   5   Very High
+3     119599     SBI Small Cap Fund - Direct Plan - Growth  SBI Mutual Fund  Small Cap  ...     36061               0.72                   4   Very High
+4     119120  SBI Magnum Gilt Fund - Regular Plan - Growth  SBI Mutual Fund       Gilt  ...     24101               0.77                   5         Low
 
 [5 rows x 19 columns]
 
@@ -157,7 +157,7 @@ FIRST 5 ROWS:
 FILE: icici_bluechip_nav.csv
 
 SHAPE:
-(3306, 2)
+(3313, 2)
 
 DATA TYPES:
 date     object
@@ -166,17 +166,17 @@ dtype: object
 
 FIRST 5 ROWS:
          date       nav
-0  31-05-2026  104.3083
-1  29-05-2026  104.3129
-2  27-05-2026  105.9296
-3  26-05-2026  105.5115
-4  25-05-2026  105.9217
+0  09-06-2026  103.5259
+1  08-06-2026  102.4845
+2  05-06-2026  103.8102
+3  04-06-2026  103.6421
+4  03-06-2026  103.4809
 
 ==================================================
 FILE: axis_bluechip_nav.csv
 
 SHAPE:
-(3564, 2)
+(3571, 2)
 
 DATA TYPES:
 date     object
@@ -185,11 +185,11 @@ dtype: object
 
 FIRST 5 ROWS:
          date        nav
-0  29-05-2026  6151.1139
-1  27-05-2026  6146.6118
-2  26-05-2026  6144.0004
-3  25-05-2026  6144.8478
-4  22-05-2026  6142.6380
+0  09-06-2026  6180.6685
+1  08-06-2026  6174.2084
+2  05-06-2026  6168.4755
+3  04-06-2026  6160.9434
+4  03-06-2026  6159.9626
 
 ==================================================
 FILE: 08_investor_transactions.csv
@@ -227,7 +227,7 @@ FIRST 5 ROWS:
 FILE: nippon_large_cap_nav.csv
 
 SHAPE:
-(3297, 2)
+(3304, 2)
 
 DATA TYPES:
 date     object
@@ -236,11 +236,11 @@ dtype: object
 
 FIRST 5 ROWS:
          date      nav
-0  29-05-2026  98.4656
-1  27-05-2026  99.8092
-2  26-05-2026  99.4356
-3  25-05-2026  99.8047
-4  22-05-2026  98.7497
+0  09-06-2026  96.6849
+1  08-06-2026  95.8952
+2  05-06-2026  97.2456
+3  04-06-2026  97.2621
+4  03-06-2026  97.2167
 
 ==================================================
 FILE: 09_portfolio_holdings.csv
@@ -332,7 +332,7 @@ FIRST 5 ROWS:
 FILE: kotak_bluechip_nav.csv
 
 SHAPE:
-(3300, 2)
+(3307, 2)
 
 DATA TYPES:
 date     object
@@ -341,11 +341,11 @@ dtype: object
 
 FIRST 5 ROWS:
          date       nav
-0  29-05-2026  248.6673
-1  27-05-2026  251.2273
-2  26-05-2026  251.2702
-3  25-05-2026  249.2266
-4  22-05-2026  247.8039
+0  09-06-2026  244.2347
+1  08-06-2026  242.1594
+2  05-06-2026  246.0878
+3  04-06-2026  246.0784
+4  03-06-2026  245.6593
 
 ==================================================
 FILE: 06_industry_folio_count.csv

@@ -1,3 +1,10 @@
+"""
+Fund Recommendation Engine
+
+Generates mutual fund recommendations using
+performance metrics and portfolio characteristics.
+"""
+
 from pathlib import Path
 import pandas as pd
 

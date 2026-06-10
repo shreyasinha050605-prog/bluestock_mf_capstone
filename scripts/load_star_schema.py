@@ -1,3 +1,10 @@
+"""
+Star Schema Loader
+
+Creates analytical tables and relationships
+required for business intelligence reporting.
+"""
+
 from pathlib import Path
 import pandas as pd
 from sqlalchemy import create_engine

@@ -1,3 +1,10 @@
+"""
+Live NAV Fetch Utility
+
+Fetches latest mutual fund NAV values from
+external sources and updates local datasets.
+"""
+
 from pathlib import Path
 import requests
 import pandas as pd

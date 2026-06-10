@@ -1,3 +1,11 @@
+"""
+Data Ingestion Module
+
+Loads raw mutual fund datasets from CSV files,
+performs initial validation, and prepares data
+for downstream ETL processing.
+"""
+
 import pandas as pd
 import os
 from pathlib import Path
